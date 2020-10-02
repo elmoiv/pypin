@@ -9,9 +9,9 @@ TYPES = [
     ('GIF',   'gif')
     ]
 
-ID, HTML = getHtml(input('URL: '))
-JSON = getJson(HTML)
-_type, mediaUrl = decideType(JSON)
+ID, HTML           =      getHtml(input('URL: '))
+JSON               =      getJson(HTML)
+_type, mediaUrl    =      decideType(JSON)
 
 if _type == None:
     print('Nothing Found!')
