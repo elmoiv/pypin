@@ -17,13 +17,12 @@ TYPES = [
 ID, HTML           =      getHtml(input('URL: '))
 JSON               =      getJson(HTML)
 TYPE, MEDIA_URL    =      decideType(JSON)
-EXT                =      MEDIA_URL.split('.')[-1]
 
 if TYPE == None:
     print('Nothing Found!')
     exit(0)
 
-file_name = f'{ID}.{EXT}'
+file_name = f'{ID}.{MEDIA_URL.split(".")[-1]}'
 
 print(f'Downloading {TYPES[TYPE]}: {file_name}')
 download(MEDIA_URL, file_name)
