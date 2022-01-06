@@ -14,19 +14,20 @@ TYPES = [
     'Image',
     ]
 
-ID, HTML           =      getHtml(input('URL: '))
-if ID == None:
+NAME, HTML           =      getHtml(input('URL: '))
+
+if NAME == None:
     print('[ERROR] Not a Valid Pinterest URL')
     exit(0)
 
 JSON               =      getJson(HTML)
-TYPE, MEDIA_URL    =      decideType(JSON, ID)
+TYPE, MEDIA_URL    =      decideType(JSON)
 
 if TYPE == None:
     print('[404] Nothing Found!')
     exit(0)
 
-file_name = f'{ID}.{MEDIA_URL.split(".")[-1]}'
+file_name = f'{NAME}.{MEDIA_URL.split(".")[-1]}'
 
 print(f'Downloading {TYPES[TYPE]}: {file_name}')
 download(MEDIA_URL, file_name)
