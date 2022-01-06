@@ -6,7 +6,7 @@ Minimalist Pinterest downloader (Videos, Gifs and Images)
 ```bash
 python pypin.py
 ```
-  - Enter pin url in the format of **https ://www .pinterest .com/pin/XXXXXXXXXXXXXXX/**
+  - Enter pin url in the format of **https://www.pinterest.com/pin/XXXXXXXXXXXXXXX/**
 ```bash
 URL: 
 ```
