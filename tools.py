@@ -12,7 +12,6 @@ def getJson(html):
                 }
             )
 
-    __import__('pyperclip').copy(re.findall(r'>(.*)<', str(scriptTag))[0])
     # Extract json inside script
     return json.loads(re.findall(r'>(.*)<', str(scriptTag))[0])
 
